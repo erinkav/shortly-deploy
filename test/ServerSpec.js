@@ -133,7 +133,7 @@ xdescribe('', function() {
 
   }); // 'Link creation'
 
-  describe('Priviledged Access:', function() {
+  xdescribe('Priviledged Access:', function() {
 
     // /*  Authentication  */
     // // TODO: xit out authentication
@@ -169,7 +169,7 @@ xdescribe('', function() {
 
   }); // 'Privileged Access'
 
-  describe('Account Creation:', function() {
+  xdescribe('Account Creation:', function() {
 
     it('Signup creates a new user', function(done) {
       request(app)
@@ -205,7 +205,7 @@ xdescribe('', function() {
 
   }); // 'Account Creation'
 
-  describe('Account Login:', function() {
+  xdescribe('Account Login:', function() {
 
     beforeEach(function(done) {
       new User({
