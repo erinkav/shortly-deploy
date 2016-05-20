@@ -21,4 +21,6 @@ urlSchema.pre('save', function (next) {
   next();
 });
          
-module.exports = urlSchema;
+var Link = db.model('Link', urlSchema);
+
+module.exports = Link;

@@ -27,4 +27,6 @@ userSchema.methods.hashPassword = function() {
     });
 };
 
+var User = db.model('User', userSchema);
+
 module.exports = userSchema;
