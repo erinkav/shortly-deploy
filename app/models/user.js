@@ -13,7 +13,7 @@ userSchema.post('save', function () {
 });
 
 userSchema.methods.comparePassword = function(attemptedPassword, callback) { //refactor
-  bcrypt.compare(attemptedPassword, this.get('password'), function(err, isMatch) {
+  bcrypt.compare(attemptedPassword, this.password, function(err, isMatch) {
     callback(isMatch);
   });
 };
@@ -29,4 +29,4 @@ userSchema.methods.hashPassword = function() {
 
 var User = db.model('User', userSchema);
 
-module.exports = userSchema;
+module.exports = User;
